@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>aspectj-error</artifactId>
-	<groupId>com.ia</groupId>
+	<groupId>com.benze</groupId>
 	<packaging>jar</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 
@@ -39,6 +39,33 @@
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>aspectj-maven-plugin</artifactId>
 				<version>1.7</version>
+					<dependencies>
+						<dependency>
+							<groupId>org.aspectj</groupId>
+							<artifactId>aspectjrt</artifactId>
+							<version>1.8.2</version>
+						</dependency>
+						<dependency>
+							<groupId>org.aspectj</groupId>
+							<artifactId>aspectjtools</artifactId>
+							<version>1.8.2</version>
+						</dependency>
+					</dependencies>
+					<executions>
+						<execution>
+							<goals>
+								<goal>compile</goal>
+							</goals>
+						</execution>
+					</executions>
+					<configuration>
+						<Xlint>warning</Xlint>
+						<outxml>true</outxml>
+						<complianceLevel>1.7</complianceLevel>
+						<source>1.7</source>
+						<target>1.7</target>
+						<showWeaveInfo>true</showWeaveInfo>
+					</configuration>
 			</plugin>
 
 		</plugins>

@@ -8,5 +8,7 @@ public class Test {
         ApplyAspect aa = new ApplyAspect();
         aa.setCreated(new Date());
         System.out.println( aa.getCreated().toString());
+        System.out.println(aa.toString());
+        System.out.println("all done");
     }
 }
